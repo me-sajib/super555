@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+body {
+	background: #fbfbfb;
+	font-family: DM Sans, sans-serif !important;
+	max-width: 430px;
+	position: relative;
+	margin: auto !important;
+}
+
+.banner-btn-gradient {
+	background: radial-gradient(circle, #ed5311 0, #fc7339 100%);
+}
+
+.text-color {
+	color: #ed5311;
+}
+
+.line-gradient {
+	background: radial-gradient(circle, #fff 0, #dbdbdb 0, #fff 100%);
+}
+
+.primary {
+	color: rgb(237 83 17);
+}
+
+.steps-link.in-view a {
+	transform: scale(1.1);
+	background-color: #ed5311;
+	color: #fff !important;
+}
+
+.steps-link.in-view span {
+	color: #fff !important;
+}
+
+.tabs-filter {
+	filter: drop-shadow(4px 4px 8px rgba(103, 103, 103, 0.25))
+		drop-shadow(-4px -4px 8px #fff);
+}
+
+@keyframes highlight {
+	0% {
+		background-color: transparent;
+		background-size: 0 100%;
+	}
+
+	50% {
+		background-color: #ed5311;
+		background-size: 100% 100%;
+		color: #fff;
+	}
+
+	to {
+		background-color: transparent;
+		background-size: 0 100%;
+	}
+}
+
+.highlight {
+	position: relative;
+	animation: highlight 1.5s infinite;
+	background: linear-gradient(90deg, transparent, #ed5311, transparent);
+	background-repeat: no-repeat;
+	background-size: 0 100%;
+	transition: background-size 1.5s;
+}

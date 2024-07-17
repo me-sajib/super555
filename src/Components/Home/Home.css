@@ -1,0 +1,111 @@
+.all__tickets__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    padding: 1%;
+    margin-bottom: 200px;
+    font-size: 17px;
+}
+
+.tickets__card__container {
+    width: 100%;
+}
+
+
+.tickets__card__container .each__ticket__container {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 20px 50px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 0.5rem;
+    position: relative;
+    transition: 0.15s ease-in;
+    margin: 10px;
+}
+
+.tickets__card__container .each__ticket__container .device__icon {
+    height: 30px;
+}
+
+.card-image-snippets {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header-snippets {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-header-snippets a {
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 1.25;
+    padding-right: 1rem;
+    text-decoration: none;
+    color: inherit;
+    will-change: transform;
+}
+
+.card-header-snippets a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.icon-button-snippets {
+    border: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    transition: 0.25s ease;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    cursor: pointer;
+    color: #565656;
+}
+
+.icon-button-snippets svg {
+    width: 1em;
+    height: 1em;
+}
+
+.icon-button-snippets:hover,
+.icon-button-snippets:focus {
+    background-color: #ec4646;
+    color: #fff;
+}
+
+.card-footer-snippets {
+    margin-top: 0.5rem;
+    border-top: 1px solid #ddd;
+    padding-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-meta-snippets {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    color: #787878;
+}
+
+.card-meta-snippets svg {
+    flex-shrink: 0;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.25em;
+}

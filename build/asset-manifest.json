@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/me-sajib/react2/static/css/main.7f55ec35.css",
+    "main.js": "/me-sajib/react2/static/js/main.f6ec7181.js",
+    "static/media/gift.gif": "/me-sajib/react2/static/media/gift.4181d5afb23fd93ba1f5.gif",
+    "static/media/slider4.gif": "/me-sajib/react2/static/media/slider4.95fe30e2fbc1a2e137bc.gif",
+    "static/media/super5logo5.png": "/me-sajib/react2/static/media/super5logo5.c5ee9033a71ed0c5b85d.png",
+    "static/media/balloon.png": "/me-sajib/react2/static/media/balloon.5a115403655cf8f318b0.png",
+    "static/media/support.png": "/me-sajib/react2/static/media/support.3c2d51c19ce9da4f658c.png",
+    "static/media/coin.png": "/me-sajib/react2/static/media/coin.eba006fb33373b069e02.png",
+    "static/media/circle.png": "/me-sajib/react2/static/media/circle.9e651f2327e861d077d7.png",
+    "static/media/checked.png": "/me-sajib/react2/static/media/checked.6f298cca57a5a8b36055.png",
+    "static/media/coins.svg": "/me-sajib/react2/static/media/coins.5af41753fdbe5cb5076e29dd71789a59.svg",
+    "static/media/refer.svg": "/me-sajib/react2/static/media/refer.9ecd97e6e8f709eab8332152ac209285.svg",
+    "index.html": "/me-sajib/react2/index.html",
+    "static/media/rewards.svg": "/me-sajib/react2/static/media/rewards.650e0591769c98223af6265a7c8b4dcc.svg",
+    "main.7f55ec35.css.map": "/me-sajib/react2/static/css/main.7f55ec35.css.map",
+    "main.f6ec7181.js.map": "/me-sajib/react2/static/js/main.f6ec7181.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f55ec35.css",
+    "static/js/main.f6ec7181.js"
+  ]
+}

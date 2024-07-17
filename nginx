@@ -1,0 +1,9 @@
+server {
+    root /var/www/dream5-webapp/build;
+    server_name dream5.live;
+    index index.html index.htm;
+    location / {
+          root /var/www/dream5-webapp/build;
+        try_files $uri /index.html;
+    }
+}
