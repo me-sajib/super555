@@ -8,7 +8,7 @@ const ProfileDrawer = ({ open, setOpen }) => {
       setVisible(true);
       setTimeout(() => {
         document.getElementById("drawer").style.transform =
-          "translateX(calc(39vw - 170px))";
+          "translateX(calc(42vw - 170px))";
       }, 30); // Small delay to allow for transition
     } else {
       document.getElementById("drawer").style.transform = "translateX(-100%)";
