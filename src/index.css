@@ -68,3 +68,7 @@ body {
 	background-size: 0 100%;
 	transition: background-size 1.5s;
 }
+
+.bg-primarys:hover {
+	background-color: #ed53111a !important;
+}

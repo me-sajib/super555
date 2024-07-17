@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const ProfileDrawer = ({ open, setOpen }) => {
   const [visible, setVisible] = useState(false);
@@ -6,11 +7,18 @@ const ProfileDrawer = ({ open, setOpen }) => {
   useEffect(() => {
     if (open) {
       setVisible(true);
+      if (typeof window != 'undefined' && window.document) {
+        document.body.style.overflow = 'hidden';
+      }
+
       setTimeout(() => {
         document.getElementById("drawer").style.transform =
           "translateX(calc(42vw - 170px))";
       }, 30); // Small delay to allow for transition
     } else {
+      if (typeof window != 'undefined' && window.document) {
+        document.body.style.overflow = 'auto';
+      }
       document.getElementById("drawer").style.transform = "translateX(-100%)";
       setTimeout(() => {
         setVisible(false);
@@ -39,13 +47,10 @@ const ProfileDrawer = ({ open, setOpen }) => {
             </div>
           </div>
           <div
-            className="max-w-[430px] sticky top-0 pt-1 mt-[56px] z-[10] px-[10px] 
-mx-auto w-full"
+            className="max-w-[430px] sticky top-0 pt-1 mt-[56px] z-[10] px-[10px] mx-auto w-full"
           >
             <div
-              className="bg-white   mt-1 w-full shadow-md rounded-[20px]
-
-flex items-center gap-3 p-[10px]"
+              className="bg-white   mt-1 w-full shadow-md rounded-[20px] flex items-center gap-3 p-[10px]"
             >
               <img
                 src="https://super-5-wheat.vercel.app/img/profile/profile.png"
@@ -96,7 +101,7 @@ flex items-center gap-3 p-[10px]"
             <main className="pt-[20px] w-full">
               <div className="max-w-[430px] flex flex-col gap-2 mx-auto px-[10px] mt-4">
                 <a
-                  className="flex cursor-pointer px-2 group rounded-md hover:bg-primary hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
+                  className="flex cursor-pointer px-2 group rounded-md bg-primarys hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
                   href="/settings"
                 >
                   <div className="flex items-center gap-2">
@@ -134,7 +139,7 @@ flex items-center gap-3 p-[10px]"
                   </svg>
                 </a>
                 <a
-                  className="flex cursor-pointer px-2 group rounded-md hover:bg-primary hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
+                  className="flex cursor-pointer px-2 group rounded-md bg-primarys hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
                   href="/transactions"
                 >
                   <div className="flex items-center gap-2">
@@ -172,7 +177,7 @@ flex items-center gap-3 p-[10px]"
                   </svg>
                 </a>
                 <a
-                  className="flex cursor-pointer px-2 group rounded-md hover:bg-primary hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
+                  className="flex cursor-pointer px-2 group rounded-md bg-primarys hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
                   href="/transactions"
                 >
                   <div className="flex items-center gap-2">
@@ -221,7 +226,7 @@ flex items-center gap-3 p-[10px]"
                   </svg>
                 </a>
                 <a
-                  className="flex cursor-pointer px-2 group rounded-md hover:bg-primary hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
+                  className="flex cursor-pointer px-2 group rounded-md bg-primarys hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
                   href="/help-and-support"
                 >
                   <div className="flex items-center gap-2">
@@ -262,9 +267,9 @@ flex items-center gap-3 p-[10px]"
                     ></path>
                   </svg>
                 </a>
-                <a
-                  className="flex cursor-pointer px-2 group rounded-md hover:bg-primary hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
-                  href="/how-to-play"
+                <Link
+                  className="flex cursor-pointer px-2 group rounded-md bg-primarys hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
+                  to="/how-to-play"
                 >
                   <div className="flex items-center gap-2">
                     <div className="h-[38px] w-[38px] flex justify-center items-center bg-[#FFEEE7] rounded-[10px]">
@@ -299,9 +304,9 @@ flex items-center gap-3 p-[10px]"
                       fill="#626262"
                     ></path>
                   </svg>
-                </a>
+                </Link>
                 <a
-                  className="flex cursor-pointer px-2 group rounded-md hover:bg-primary hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
+                  className="flex cursor-pointer px-2 group rounded-md bg-primarys hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
                   href="/privacy-policy"
                 >
                   <div className="flex items-center gap-2">
@@ -343,7 +348,7 @@ flex items-center gap-3 p-[10px]"
                   </svg>
                 </a>
                 <a
-                  className="flex cursor-pointer px-2 group rounded-md hover:bg-primary hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
+                  className="flex cursor-pointer px-2 group rounded-md bg-primarys hover:bg-opacity-10 transition-all duration-300 items-center h-[46px] justify-between"
                   href="/terms-and-conditions"
                 >
                   <div className="flex items-center gap-2">
