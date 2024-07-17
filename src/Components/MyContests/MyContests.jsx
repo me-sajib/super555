@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom'
 import coinImage from '../../Assets/coin.png'
 import { shouldShowContest } from '../../Utils/Contest'
 import super5logo5 from '../../Assets/super5logo5.png'
+import { Link } from "react-router-dom";
 
 export default function MyContests() {
     const [apiCalled, setApiCalled] = useState()
@@ -63,7 +64,7 @@ export default function MyContests() {
                 } else {
                 }
             })
-            .catch((error) => {})
+            .catch((error) => { })
     }
 
     useEffect(() => {
@@ -72,29 +73,75 @@ export default function MyContests() {
         }
     })
 
+    const tabList = [
+        {
+            title: "Upcoming",
+            id: 1,
+            url: "/matches",
+        },
+        {
+            title: "Live",
+            id: 2,
+            url: "/live",
+        },
+        {
+            title: "Completed",
+            id: 3,
+            url: "/completed",
+        }
+    ];
+    const [activeTab, setActiveTab] = useState(1);
+
+
     return (
         <>
-            <div className='bg-headerColor text-white flex justify-between px-4 py-3'>
-                <div>
-                    <img className='w-32' src={super5logo5} alt='' />
+            <div class="w-full sticky top-0 z-[2]  min-h-[70px] flex justify-center items-center px-1 max-w-[430px] mx-auto">
+                <div class="absolute top-0 left-0 w-full h-[80px]">
+                    <img
+                        src="https://super-5-wheat.vercel.app/img/header/ellipse.png"
+                        alt=""
+                        class="w-full h-full"
+                    />
                 </div>
-                <div className='flex align-center justify-center items-center gap-2'>
-                    <div className='font-bold text-xl'>{localStorage.getItem('user_coins') || 0}</div>
-                    <div>
-                        <img src={coinImage} alt='' className='w-8 h-8' />
+                <div class="h-[70px] px-[10px] sticky z-[101] top-0 flex justify-center items-center w-full">
+                    <div class="absolute top-[22px] left-[10px]">
+                        <Link to="/">
+                            <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 2L3 14.4138M3 14.4138L15 26M3 14.4138H27" stroke="white" stroke-width="3"></path>
+                            </svg>
+                        </Link>
                     </div>
+                    <h2 class="text-[20px] leading-[1] text-center text-white font-bold">My Matches</h2>
                 </div>
+            </div>
+
+            <div className="w-full flex justify-between p-3 rounded-full bg-white shadow-sm -pt-10">
+                {tabList.map((d) => {
+                    const active = d.id === activeTab;
+
+                    return (
+                        <Link
+                            key={d.id}
+                            className={`text-[14px] rounded-full px-[25px] py-[8px] font-bold text-white ${active ? "bg-primary" : "bg-[#FFBEA9]"
+                                }`}
+                            href={d.url}
+                        // onClick={() => setActiveTab(d.id)}
+                        >
+                            {d.title}
+                        </Link>
+                    );
+                })}
             </div>
 
             <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext value={value}>
-                    <Box sx={{ borderBottom: 1, borderColor: 'divider', display: 'flex', justifyContent: 'center' }}>
+                    {/* <Box sx={{ borderColor: 'divider', display: 'flex', justifyContent: 'center' }}>
                         <TabList onChange={handleChange} aria-label='lab API tabs example'>
                             <Tab label='Upcoming' value='1' />
                             <Tab label='Live' value='2' />
                             <Tab label='Completed' value='3' />
                         </TabList>
-                    </Box>
+                    </Box> */}
                     <TabPanel value='1'>
                         <div className='all__tickets__container'>
                             {upcomingContests.length > 0 &&

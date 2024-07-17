@@ -5,7 +5,7 @@ module.exports = {
 		extend: {
 			colors: {
 				transparent: "transparent",
-				bgPrimary: "rgb(237 83 17)",
+				primary: "#ed5311",
 				current: "currentColor",
 				appBlue: "#1141C1",
 				bermuda: "#78dcca",
