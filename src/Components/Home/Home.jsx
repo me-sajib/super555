@@ -81,7 +81,7 @@ function Home() {
 
   useEffect(() => {
     if (apiCalled) {
-      // getPendingTickets();
+      getPendingTickets();
     }
   }, []);
 

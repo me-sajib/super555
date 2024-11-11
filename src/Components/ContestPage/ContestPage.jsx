@@ -54,7 +54,7 @@ export default function ContestPage() {
                 console.log(typeof user.coins)
                 setUserCoins(user.coins)
             }
-        } catch {}
+        } catch { }
     }
 
     const getContestDataForUser = (contestId) => {
@@ -108,7 +108,7 @@ export default function ContestPage() {
             .then((data) => {
                 console.log('Data : ', data)
             })
-            .catch((error) => {})
+            .catch((error) => { })
     }
 
     const handleStartQuiz = () => {
@@ -168,7 +168,7 @@ export default function ContestPage() {
             .then((data) => {
                 console.log('Data : ', data)
             })
-            .catch((error) => {})
+            .catch((error) => { })
     }
 
     const handleReturnHome = () => {
@@ -266,10 +266,18 @@ export default function ContestPage() {
     return (
         <>
             <div className='text-center bg-gray-800 text-white py-2'>
-                <div className='text-2xl font-bold'>
+                <div class="absolute top-0 left-0 w-full h-[80px]">
+                    <img
+                        src="https://super-5-wheat.vercel.app/img/header/ellipse.png"
+                        alt=""
+                        class="w-full h-full"
+                    />
+                </div>
+
+                {/* <div className='text-2xl font-bold'>
                     {contestData.teamOneShortName} vs {contestData.teamTwoShortName} {contestData.teamOneShortName === '' && contestData.teamTwoShortName === '' && contestData.name}
                 </div>
-                <h2 className='text-xs text-center my-2'>{formatTimeInStartsInFormat(contestData.startDate)}</h2>
+                <h2 className='text-xs text-center my-2'>{formatTimeInStartsInFormat(contestData.startDate)}</h2> */}
             </div>
             <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext value={value}>
@@ -290,7 +298,7 @@ export default function ContestPage() {
                                             <div className='flex flex-row items-center justify-between p-2'>
                                                 <p className='text-xl mb-2'>Entry Fees : {contestData.entryFees}</p>
                                             </div>
-                                            <div className='border border-gray-200 border-2 rounded-lg w-80 mb-8'>
+                                            <div className='border-gray-200 border-2 rounded-lg w-80 mb-8'>
                                                 <div className='flex flex-row items-center justify-between p-4'>
                                                     <div>
                                                         <p className='font-bold'>Win iPhone 15</p>
